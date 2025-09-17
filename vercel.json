@@ -1,0 +1,21 @@
+{
+  "buildCommand": "pnpm install && pnpm build",
+  "installCommand": "pnpm install",
+  "outputDirectory": "dist/spa",
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "node tolerant",
+      "memory": 1024
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

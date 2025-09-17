@@ -5,12 +5,12 @@ import path from "path";
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, "server/node-build.ts"),
+      entry: path.resolve(__dirname, "api/index.ts"),
       name: "server",
       fileName: "production",
       formats: ["es"],
     },
-    outDir: "dist/server",
+    outDir: ".vercel/output/functions/api/index.func",
     target: "node22",
     ssr: true,
     rollupOptions: {
@@ -35,7 +35,7 @@ export default defineConfig({
       ],
       output: {
         format: "es",
-        entryFileNames: "[name].mjs",
+        entryFileNames: "index.mjs",
       },
     },
     minify: false, // Keep readable for debugging
