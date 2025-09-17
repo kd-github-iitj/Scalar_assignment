@@ -2,8 +2,6 @@
 
 A production-ready full-stack React application template with integrated Express server, featuring React Router 6 SPA mode, TypeScript, Vitest, Zod and modern tooling.
 
-While the starter comes with a express server, only create endpoint when strictly neccesary, for example to encapsulate logic that must leave in the server, such as private keys handling, or certain DB operations, db...
-
 ## Tech Stack
 
 - **PNPM**: Prefer pnpm
@@ -31,7 +29,7 @@ shared/                   # Types used by both client & server
 
 ## Key Features
 
-## SPA Routing System
+### SPA Routing System
 
 The routing system is powered by React Router 6:
 
@@ -162,3 +160,4 @@ const data: MyRouteResponse = await response.json();
 - Production-ready with multiple deployment options
 - Comprehensive UI component library included
 - Type-safe API communication via shared interfaces
+
